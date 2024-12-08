@@ -1,0 +1,174 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+    background-color: #fef6e4; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-image: url('https://img.freepik.com/premium-vector/funny-smiley-emoji-background_528453-146.jpg'); 
+    background-size: cover;
+}
+
+.joke-wrapper {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 5px dashed #ff69b4; 
+    animation: float 3s ease-in-out infinite; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.joke-wrapper:hover {
+    transform: scale(1.05); 
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    color: #ff6347; 
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+.setup {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ff1493;
+    animation: bounce 1s infinite;
+}
+.punchline {
+    font-size: 1.75rem;
+    color: #32cd32;
+    font-weight: bold;
+    text-decoration: underline wavy #ff6347; 
+    animation: fadeIn 2s ease-in-out; 
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.loading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffb84d; 
+    font-style: italic;
+    animation: wiggle 1s infinite; 
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+.error {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #d9534f; 
+}
+.skip-button {
+    background-color: #ff69b4; 
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.skip-button:hover {
+    background-color: #ff1493; 
+    transform: scale(1.1); 
+}
+
+.skip-button:active {
+    transform: scale(0.95); 
+}
+
+.cartoon {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: spin 3s infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 2.5rem; 
+    }
+
+    .setup {
+        font-size: 1.2rem; 
+    }
+
+    .punchline {
+        font-size: 1.5rem; 
+    }
+    .skip-button {
+        font-size: 1.1rem; 
+        padding: 10px 25px; 
+    }
+
+    .cartoon {
+        width: 100px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 2rem; 
+    }
+
+    .setup {
+        font-size: 1rem; 
+    }
+    .punchline {
+        font-size: 1.3rem; 
+    }
+
+    .skip-button {
+        font-size: 1rem; 
+        padding: 8px 20px;
+    }
+    .cartoon {
+        width: 80px; 
+    }
+
+    .joke-wrapper {
+        padding: 20px; 
+    }
+}
